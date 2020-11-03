@@ -3,7 +3,16 @@
 
 Method **checkMyString** will check for us information about string.
 
-/GET method will be used.
+`/GET method will be used.`
+
+
+
+
+Method **signsAnalize** in CheckSigns class 
+
+`will analize and count the occurrence of characters in string`
+
+
 
 ### **To test it:**
 
