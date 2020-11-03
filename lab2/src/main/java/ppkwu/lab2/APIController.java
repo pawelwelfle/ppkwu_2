@@ -32,4 +32,17 @@ public class APIController {
         }
         return "Lower Cases: " + lowerCase;
     }
+
+
+    @GetMapping("/howMuchUpperCase")
+    @ResponseBody
+    public String checkingUpper(@RequestParam String myString) {
+        int upperCase = 0;
+        for (int k = 0; k < myString.length(); k++) {
+            if (Character.isUpperCase(myString.charAt(k))) upperCase++;
+        }
+        return "Upper Cases: " + upperCase;
+    }
+
+
 }
