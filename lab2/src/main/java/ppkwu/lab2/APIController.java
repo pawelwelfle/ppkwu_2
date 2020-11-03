@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class APIController {
 
+    /**
+     * method to get info about signs
+     */
+
     @GetMapping("/check")
     @ResponseBody
     public String checkMyString(@RequestParam String myString) {
