@@ -23,7 +23,7 @@ public class APIController {
         return myString;
     }
 
-    @GetMapping("/howMuchLowerCase")
+    @GetMapping("/lowers")
     @ResponseBody
     public String checkingLower(@RequestParam String myString) {
         int lowerCase = 0;
@@ -34,7 +34,7 @@ public class APIController {
     }
 
 
-    @GetMapping("/howMuchUpperCase")
+    @GetMapping("/uppers")
     @ResponseBody
     public String checkingUpper(@RequestParam String myString) {
         int upperCase = 0;
@@ -44,7 +44,7 @@ public class APIController {
         return "Amount of Upper Cases Letters: " + upperCase;
     }
 
-    @GetMapping("/howMuchDigits")
+    @GetMapping("/digits")
     @ResponseBody
     public String checkingDigits(@RequestParam String myString) {
         int digitsAmount = 0;
@@ -54,7 +54,7 @@ public class APIController {
         return "Amount of digits: " + digitsAmount;
     }
 
-    @GetMapping("/howMuchSpecialLetters")
+    @GetMapping("/specials")
     @ResponseBody
     public String checkingSpecials(@RequestParam String myString) {
         int specials = 0;
