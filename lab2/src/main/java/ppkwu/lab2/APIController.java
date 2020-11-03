@@ -30,7 +30,7 @@ public class APIController {
         for (int k = 0; k < myString.length(); k++) {
             if (Character.isLowerCase(myString.charAt(k))) lowerCase++;
         }
-        return "Lower Cases: " + lowerCase;
+        return "Amount of Lower Cases Letters: " + lowerCase;
     }
 
 
@@ -41,7 +41,31 @@ public class APIController {
         for (int k = 0; k < myString.length(); k++) {
             if (Character.isUpperCase(myString.charAt(k))) upperCase++;
         }
-        return "Upper Cases: " + upperCase;
+        return "Amount of Upper Cases Letters: " + upperCase;
+    }
+
+    @GetMapping("/howMuchDigits")
+    @ResponseBody
+    public String checkingDigits(@RequestParam String myString) {
+        int digitsAmount = 0;
+        for (int k = 0; k < myString.length(); k++) {
+            if (Character.isDigit(myString.charAt(k))) digitsAmount++;
+        }
+        return "Amount of digits: " + digitsAmount;
+    }
+
+    @GetMapping("/howMuchSpecialLetters")
+    @ResponseBody
+    public String checkingSpecials(@RequestParam String myString) {
+        int specials = 0;
+        for (int k = 0; k < myString.length(); k++) {
+            if (!Character.isDigit(myString.charAt(k))
+                    && !Character.isUpperCase(myString.charAt(k))
+                    && !Character.isLowerCase(myString.charAt(k))) {
+                specials++;
+            }
+        }
+        return "Amount of specials: " + specials;
     }
 
 
