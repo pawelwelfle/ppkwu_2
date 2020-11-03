@@ -79,5 +79,23 @@ public class APIController {
         return "Amount of specials: " + specials;
     }
 
+    /**
+     * method to get info about all signs in string
+     */
+    @GetMapping("/analize")
+    @ResponseBody
+    public String stringAnalize(@RequestParam String myString) {
+        checkingUpper(myString);
+        checkingLower(myString);
+        checkingDigits(myString);
+        checkingSpecials(myString);
+
+        return "Analize of given string: " + myString + " \n ."
+                + checkingUpper(myString) +
+                checkingLower(myString) +
+                checkingDigits(myString) +
+                checkingSpecials(myString);
+    }
+
 
 }
