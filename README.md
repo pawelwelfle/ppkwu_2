@@ -18,3 +18,6 @@ Method **signsAnalize** in CheckSigns class
 
 hit to the endpoint 
 --->  http://localhost:8080/check?myString=test1API#
+
+
+http://localhost:8080/howMuchLowerCase?myString=tEsTLoWer

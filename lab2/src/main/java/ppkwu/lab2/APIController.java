@@ -23,4 +23,13 @@ public class APIController {
         return myString;
     }
 
+    @GetMapping("/howMuchLowerCase")
+    @ResponseBody
+    public String checkingLower(@RequestParam String myString) {
+        int lowerCase = 0;
+        for (int k = 0; k < myString.length(); k++) {
+            if (Character.isLowerCase(myString.charAt(k))) lowerCase++;
+        }
+        return "Lower Cases: " + lowerCase;
+    }
 }
