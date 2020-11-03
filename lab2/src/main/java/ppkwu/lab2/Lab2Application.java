@@ -3,6 +3,10 @@ package ppkwu.lab2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author pawel.welfle
+ */
+
 @SpringBootApplication
 public class Lab2Application {
 
