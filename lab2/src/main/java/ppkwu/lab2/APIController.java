@@ -23,6 +23,9 @@ public class APIController {
         return myString;
     }
 
+    /**
+     * method to get info about lower signs amount
+     */
     @GetMapping("/lowers")
     @ResponseBody
     public String checkingLower(@RequestParam String myString) {
@@ -33,7 +36,9 @@ public class APIController {
         return "Amount of Lower Cases Letters: " + lowerCase;
     }
 
-
+    /**
+     * method to get info about upper signs amount
+     */
     @GetMapping("/uppers")
     @ResponseBody
     public String checkingUpper(@RequestParam String myString) {
@@ -44,6 +49,9 @@ public class APIController {
         return "Amount of Upper Cases Letters: " + upperCase;
     }
 
+    /**
+     * method to get info about digits amount
+     */
     @GetMapping("/digits")
     @ResponseBody
     public String checkingDigits(@RequestParam String myString) {
@@ -54,6 +62,9 @@ public class APIController {
         return "Amount of digits: " + digitsAmount;
     }
 
+    /**
+     * method to get info about specials signs amount
+     */
     @GetMapping("/specials")
     @ResponseBody
     public String checkingSpecials(@RequestParam String myString) {
