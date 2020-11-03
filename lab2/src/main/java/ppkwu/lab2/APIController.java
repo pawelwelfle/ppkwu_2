@@ -90,10 +90,10 @@ public class APIController {
         checkingDigits(myString);
         checkingSpecials(myString);
 
-        return "Analize of given string: " + myString + " \n ."
-                + checkingUpper(myString) +
-                checkingLower(myString) +
-                checkingDigits(myString) +
+        return "Analize of given string: " + myString + "<br>"
+                + checkingUpper(myString) + "<br>" +
+                checkingLower(myString) + "<br>" +
+                checkingDigits(myString) + "<br>" +
                 checkingSpecials(myString);
     }
 
